@@ -11,4 +11,6 @@ This is a C++ class library for using the Single Instruction Multiple Data (SIMD
 
 [Getting-started video.](https://www.youtube.com/watch?v=TKjYdLIMTrI) Video blogger Christopher Rose has made this nice video telling how to get started with the Vector Class Library.
 
+[Original repository by Agner Fog](https://github.com/vectorclass/version2)
+
 **Help:** You may ask for programming help on [StackOverflow](https://stackoverflow.com) using the tag vector-class-library.
