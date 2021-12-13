@@ -315,7 +315,11 @@ public:
     Ranvec1(int seed1, int seed2, int gtype = 3) : Ranvec1base(gtype), buf32(this), buf64(this), buf128(this)
 #if MAX_VECTOR_SIZE >= 256
     , buf256(this)
-@@ -323,18 +301,6 @@ class Ranvec1 : public Ranvec1base {
+#endif
+#if MAX_VECTOR_SIZE >= 512
+    , buf512(this)
+#endif
+    {
         randomixInterval = randomixLimit = 0;
         Ranvec1base::init(seed1, seed2);
         resetBuffers();
