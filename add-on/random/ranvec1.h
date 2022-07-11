@@ -78,7 +78,7 @@
 * For detailed instructions, see ranvec1_manual.pdf
 *
 * For theoretical explanation, see the article: 
-* Fog, Agner. �Pseudo-Random Number Generators for Vector Processors and Multicore Processors.�
+* Fog, Agner.  Pseudo-Random Number Generators for Vector Processors and Multicore Processors. 
 * Journal of Modern Applied Statistical Methods 14, no. 1 (2015): article 23.
 * http://digitalcommons.wayne.edu/jmasm/vol14/iss1/23/
 *
