@@ -296,6 +296,19 @@ public:
         Ranvec1base::init(seed1);
         resetBuffers();
     }
+    // Constructor with seeds
+    Ranvec1(int gtype, int seed1, int seed2) : Ranvec1base(gtype), buf32(this), buf64(this), buf128(this)
+#if MAX_VECTOR_SIZE >= 256
+        , buf256(this)
+#endif
+#if MAX_VECTOR_SIZE >= 512
+        , buf512(this)
+#endif
+    {
+        randomixInterval = randomixLimit = 0;
+        Ranvec1base::init(seed1, seed2);
+        resetBuffers();
+    }
     // Initialization with seeds
     void init(int seed) {                        // Initialize with one seed
         Ranvec1base::init(seed);
