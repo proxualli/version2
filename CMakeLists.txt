@@ -85,6 +85,8 @@ set(SRC_FILES
 	vectori512e.h
 	vectori512s.h
 	vectori512se.h
+  vectorfp16.h
+  vectorfp16e.h
 	vectormath_common.h
 	vectormath_exp.h
 	vectormath_hyp.h
