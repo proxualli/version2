@@ -42,14 +42,14 @@ option(BUILD_SHARED_LIBS "Build shared library" OFF)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
  
 if(WIN32 OR MSVC)
-  set(flags /arch:AVX2)
+  set(flags /arch:AVX512)
   add_compile_options(
     "$<$<COMPILE_LANGUAGE:CXX>:${flags}>"
     "$<$<COMPILE_LANGUAGE:C>:${flags}>")
-  set(debug_flags /W4 /Od)
-  set(release_flags /W3 /O2 /Ob2 /Oi /Ot /GL /GF /Gy /fp:fast)
+  set(debug_flags /bigobj /fp:contract /favor:AMD64 /W4 /Od)
+  set(release_flags /bigobj /fp:contract /favor:AMD64 /W3 /O2 /Ob2 /Oi /Ot /GL /GF /Gy /fp:fast)
 else()
-  set(flags -mfma -mavx2 -march=native)
+  set(flags -mrdseed -mrdrnd -mfma -mavx512f -mavx512dq -mavx512vl -mavx512bw -mavx512ifma -mavx512vbmi -mavx512vbmi2 -mavx512bitalg -mavx512vpopcntdq -mavx512vnni -mavx512bf16 -march=native)
   add_compile_options(
     "$<$<COMPILE_LANGUAGE:CXX>:${flags}>"
     "$<$<COMPILE_LANGUAGE:C>:${flags}>")
